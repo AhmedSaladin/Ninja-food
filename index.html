@@ -7,18 +7,40 @@
   </head>
   <body class="text-gray-600 font-body">
     <div class="grid md:grid-cols-3">
-      <div class="md:col-span-1">
-        <nav>
-          <div>
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class="text-right">
+          <div class="flex justify-between items-center">
             <h1 class="font-bold uppercase p-4 border-b border-gray-100">
               <a href="/" class="hover:text-gray-700">Food Ninja</a>
             </h1>
+            <div class="px-4 cursor-pointer md:hidden">
+              <svg
+                class="w-6"
+                id="menu-btn"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </div>
           </div>
-          <ul>
-            <li class="text-gray-700 font-bold">
-              <a href="#" class="flex gap-1">
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="text-gray-700 font-bold py-1">
+              <a
+                href="#"
+                class="flex px-4 justify-end border-r-4 border-primary"
+              >
+                <span>Home</span>
                 <svg
-                  class="w-4"
+                  class="w-4 ml-2"
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
                   fill="none"
@@ -32,13 +54,13 @@
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   />
                 </svg>
-                <span>Home</span>
               </a>
             </li>
-            <li>
-              <a href="#" class="flex gap-1">
+            <li class="py-1">
+              <a href="#" class="flex px-4 justify-end border-r-4">
+                <span>About</span>
                 <svg
-                  class="w-4"
+                  class="w-4 ml-2"
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
                   fill="none"
@@ -52,13 +74,13 @@
                     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <span>About</span>
               </a>
             </li>
-            <li>
-              <a href="#" class="flex gap-1">
+            <li class="py-1">
+              <a href="#" class="flex px-4 justify-end border-r-4">
+                <span>Contact</span>
                 <svg
-                  class="w-4"
+                  class="w-4 ml-2"
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6"
                   fill="none"
@@ -72,7 +94,6 @@
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>Contact</span>
               </a>
             </li>
           </ul>
@@ -204,9 +225,14 @@
         </div>
 
         <div class="flex justify-center">
-          <div class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner">Load more</div>
+          <div
+            class="bg-secondary-100 text-secondary-200 btn hover:shadow-inner"
+          >
+            Load more
+          </div>
         </div>
       </main>
     </div>
+    <script src="script/index.js"></script>
   </body>
 </html>
